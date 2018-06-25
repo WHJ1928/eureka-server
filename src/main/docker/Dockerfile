@@ -5,7 +5,7 @@ MAINTAINER whj1928@qq.com
 #将文件夹挂载到容器中
 VOLUME /var
 #将文件复制到镜像中
-ADD eureka.jar /var/app/eureka-server.jar
+ADD eureka-server.jar /var/app/eureka-server.jar
 #设置环境变量
 ENV TZ="Asia/Shanghai" HOME="/var/app/"
 #设置工作目录
