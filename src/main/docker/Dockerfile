@@ -1,8 +1,8 @@
 FROM java:8u111-alpine
 MAINTAINER whj1928@qq.com
 VOLUME /var
-COPY eureka-server.jar /var/app/eureka-server.jar
 ENV TZ="Asia/Shanghai" HOME="/var/app/"
+ADD eureka-server.jar /var/app/eureka-server.jar
 WORKDIR ${HOME}
 EXPOSE 1111
 ENTRYPOINT ["java" , "-Djava.security.egd=file:/dev/./urandom", "-jar" ,"/var/app/eureka-server.jar"]
